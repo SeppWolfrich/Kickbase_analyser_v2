@@ -1,9 +1,9 @@
 # streamlit run /Users/stephanschulz/Documents/30_Projekte/DataScience/LearningPython/MiniProjects/Kickbase/Kickbase_analyser/main.py outside of python3
 
 # Load Libraries
-from kickbase_analyser.models import bundesliga_standing
-from kickbase_analyser.models import ligainsider
-from kickbase_analyser.models import transformer
+from models import bundesliga_standing
+from models import ligainsider
+from models import transformer
 
 import pandas as pd
 import numpy as np
