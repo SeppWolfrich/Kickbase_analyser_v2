@@ -22,7 +22,7 @@ Ligainsider=pd.DataFrame(ligainsider.ligainsider_scraper())
 # %%
 df = merger.merger(Ligainsider, bundesliga_standing)
 #%%
-Ligainsider.rename(columns = {' Punkte ':'Gesamtpunkte', ' Ø–Punkte ':'Punkteschnitt', ' Marktwert ': 'Marktwert',' Einsätze ': 'Einsätze'}, inplace = True)
+Ligainsider.rename(columns = {' Punkte Gesamt':'Gesamtpunkte', ' Ø–Punkte ':'Punkteschnitt', ' Marktwert ': 'Marktwert',' Einsätze ': 'Einsätze'}, inplace = True)
 # %%
 Ligainsider.columns
 # %%

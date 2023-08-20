@@ -11,7 +11,7 @@ def merger(x,y):
     bundesliga_standing = y
 
     # Rename Columns
-    Ligainsider.rename(columns = {' Punkte ':'Gesamtpunkte', ' Ø–Punkte ':'Punkteschnitt', ' Marktwert ':'Marktwert',' Einsätze ':'Einsätze'})
+    Ligainsider.rename(columns = {' Punkte ':'Gesamtpunkte', ' Ø–Punkte ':'Punkteschnitt', ' Marktwert ': 'Marktwert',' Einsätze ': 'Einsätze'}, inplace = True)
 
 
     #Downsize Columns
@@ -36,6 +36,9 @@ def merger(x,y):
     Ligainsider.loc[Ligainsider.Verein == '1. FC Union Berlin', 'Verein'] = 'Union Berlin'#
     Ligainsider.loc[Ligainsider.Verein == 'RB Leipzig', 'Verein'] = 'RB Leipzig'#
     Ligainsider.loc[Ligainsider.Verein == 'Borussia Mönchengladbach', 'Verein'] = "M'Gladbach" #
+    Ligainsider.loc[Ligainsider.Verein == 'Darmstadt 98', 'Verein'] = "Darmstadt 98" #
+    Ligainsider.loc[Ligainsider.Verein == '1. FC Heidenheim', 'Verein'] = "Heidenheim" #
+    Ligainsider.loc[Ligainsider.Verein == 'SV Werder Bremen', 'Verein'] = "Werder Bremen" #
 
     #Ligainsider_final = Ligainsider
     Ligainsider_final = pd.merge(Ligainsider, bundesliga_standing, left_on='Verein',right_on='team') 
@@ -64,4 +67,5 @@ def merger(x,y):
     Ligainsider_final.loc[Ligainsider_final.PreisProPunkt == np.inf, 'PreisProPunkt'] = 0
     #Ligainsider_final.dtypes #check data types of columns
     #Ligainsider_final['Spieler']
+
     return Ligainsider_final

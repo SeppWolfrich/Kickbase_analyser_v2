@@ -2,9 +2,9 @@
 This is the main Streamlit app
 
 https://www.youtube.com/watch?v=W--_EOzdTHk tutotial
-activate venv: source ./venv/bin/activate
-python3 -m pip install "SomeProject" installing packages
-streamlit run /Users/stephanschulz/Documents/30_Projekte/DataScience/LearningPython/MiniProjects/Kickbase/Kickbase_client.py outside of python3
+activate venv: source venv/bin/activate
+python3 -m pip install "package name" installing packages
+python3 -m streamlit run /Users/stephanschulz/Documents/Coding/Python/MiniProjects/Kickbase/kickbase_analyser/main.py
 '''
 
 
